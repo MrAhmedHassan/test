@@ -7,6 +7,10 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    {{-- <link href="/css/app.css" rel="stylesheet"> --}}
+    
+    {{-- <script src="js/everything.js"></script> --}}
+
     <!-- provide the csrf token -->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     
@@ -22,75 +26,6 @@
 <label>female</label>
     <input type="radio" name='gender' value="female" class="gender">
 
-    {{-- <form>
-    <div class="form-group">
-
-        <button class="btn btn-success btn-submit">Submit</button>
-
-    </div> --}}
-
-
-
-</form>
-    
-    <script type="text/javascript">
-
-    var name = "ahmed";
-    var vale = $("input[name='gender']:checked").val();
-    console.log(vale);
-
-    $.ajaxSetup({
-    
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-
-$.ajax({
-
-       type:'POST',
-
-       url:'/ajax',
-
-       data:{gender:vale},
-
-       success:function(data){
-
-        console.log(data.success);
-       }
-
-    });
-
-    $("input[name='gender']") .change(function () { 
-        var vale = $("input[name='gender']:checked").val();
-        $.ajaxSetup({
-    
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-         
-
-        $.ajax({
-    
-               type:'POST',
-    
-               url:'/ajax',
-    
-               data:{gender:vale},
-    
-               success:function(data){
-    
-                  console.log(data.success);
-               }
-    
-            });
-       
-
-});  
-
-        
-    
-    </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
