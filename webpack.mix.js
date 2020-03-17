@@ -17,4 +17,4 @@ mix.js("resources/js/app.js", "public/js/app.js")
         "public/js/app.js"
     )
     .sass("resources/sass/app.scss", "public/css")
-    .browserSync('http://127.0.0.1:8000/');
+    .sass("resources/sass/file.scss", "public/css");

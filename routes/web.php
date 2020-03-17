@@ -104,7 +104,6 @@ Route::post('/ajax',function(Request $request){
         return response()->json(['success'=>$users]);
  
 });
-
-
-
-
+Route::get('css1',function(){
+    return view('css/css1');
+});
