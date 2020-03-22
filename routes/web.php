@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\DatatablesController;
 use App\Post;
 use App\User;
 use App\Video;
@@ -107,3 +108,5 @@ Route::post('/ajax',function(Request $request){
 Route::get('css1',function(){
     return view('css/css1');
 });
+
+Route::get('datatables', 'DatatablesController@index')->name('get.users');
